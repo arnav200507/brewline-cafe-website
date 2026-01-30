@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Brewline Café Design System
+   Warm, cozy, premium café aesthetic */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 45% 96%;
+    --foreground: 25 35% 18%;
+
+    /* Card surfaces - slightly warmer */
+    --card: 38 40% 98%;
+    --card-foreground: 25 35% 18%;
+
+    /* Popover */
+    --popover: 38 40% 98%;
+    --popover-foreground: 25 35% 18%;
+
+    /* Primary - Rich coffee brown */
+    --primary: 25 45% 22%;
+    --primary-foreground: 40 45% 96%;
+
+    /* Secondary - Soft beige */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 35% 18%;
+
+    /* Muted - Gentle warmth */
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 20% 45%;
+
+    /* Accent - Soft caramel */
+    --accent: 30 55% 55%;
+    --accent-foreground: 40 45% 98%;
+
+    /* Destructive */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 25 45% 22%;
+
+    --radius: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 38 40% 98%;
+    --sidebar-foreground: 25 35% 18%;
+    --sidebar-primary: 25 45% 22%;
+    --sidebar-primary-foreground: 40 45% 96%;
+    --sidebar-accent: 35 30% 92%;
+    --sidebar-accent-foreground: 25 35% 18%;
+    --sidebar-border: 35 25% 88%;
+    --sidebar-ring: 25 45% 22%;
+
+    /* Custom Brewline tokens */
+    --coffee-dark: 25 40% 15%;
+    --coffee-medium: 25 45% 22%;
+    --coffee-light: 30 35% 35%;
+    --cream: 40 50% 94%;
+    --cream-dark: 38 35% 88%;
+    --caramel: 30 55% 55%;
+    --caramel-light: 32 50% 70%;
+    --blush: 15 40% 85%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(40 50% 94%) 0%, hsl(35 35% 90%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(38 40% 98%) 0%, hsl(35 30% 95%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(30 55% 55%) 0%, hsl(25 50% 45%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 30% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(25 30% 30% / 0.12);
+    --shadow-elevated: 0 20px 50px -12px hsl(25 30% 30% / 0.18);
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 40 30% 92%;
+    --card: 25 25% 12%;
+    --card-foreground: 40 30% 92%;
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 35 40% 75%;
+    --primary-foreground: 25 30% 8%;
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 60%;
+    --accent: 30 50% 50%;
+    --accent-foreground: 40 45% 98%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 35 40% 75%;
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 35 40% 75%;
+    --sidebar-primary-foreground: 25 30% 8%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 25 20% 20%;
+    --sidebar-ring: 35 40% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
